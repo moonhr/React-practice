@@ -1,0 +1,36 @@
+package.json 속성 설명을 위한 readme
+
+{
+  "name": "my-app", // 프로젝트 이름
+  "version": "0.1.0", // 프로젝트 버전
+  "private": true, // true로 설정하면 이 패키지가 실수로 공개 저장소에 게시되는 것을 방지함
+  "dependencies": { // 애플리케이션이 실행되는 데 필요한 패키지들
+    "react": "^18.2.0", // React 라이브러리
+    "react-dom": "^18.2.0", // ReactDOM 라이브러리
+    "react-scripts": "5.0.1", // create-react-app의 스크립트 및 설정
+    "typescript": "^4.6.3", // TypeScript 언어
+    "@types/react": "^18.0.9", // React를 위한 TypeScript 타입 정의
+    "@types/react-dom": "^18.0.5" // ReactDOM을 위한 TypeScript 타입 정의
+  },
+  "scripts": { // 프로젝트와 관련된 스크립트
+    "start": "react-scripts start", // 개발 서버를 시작
+    "build": "react-scripts build", // 프로덕션용 빌드 생성
+    "test": "react-scripts test", // 테스트 실행
+    "eject": "react-scripts eject" // create-react-app의 기본 설정을 커스터마이즈 가능하게 설정
+  },
+  "eslintConfig": { // ESLint 설정
+    "extends": ["react-app", "react-app/jest"] // create-react-app의 기본 ESLint 규칙을 확장
+  },
+  "browserslist": { // 지원하는 브라우저 목록 설정
+    "production": [ // 프로덕션 환경에서 지원하는 브라우저
+      ">0.2%", // 시장 점유율이 0.2% 이상인 브라우저
+      "not dead", // 현재 지원이 종료되지 않은 브라우저
+      "not op_mini all" // Opera Mini 제외
+    ],
+    "development": [ // 개발 환경에서 지원하는 브라우저
+      "last 1 chrome version", // 최신 Chrome 브라우저
+      "last 1 firefox version", // 최신 Firefox 브라우저
+      "last 1 safari version" // 최신 Safari 브라우저
+    ]
+  }
+}
