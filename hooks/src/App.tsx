@@ -1,16 +1,15 @@
 // src/App.tsx
+
 import React from 'react';
-import './App.css';
-import Counter from './components/function';
+import { TodoProvider } from './components/TodoContext';
+import TodoList from './components/TodoList';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Counter />
-      </header>
-    </div>
+    <TodoProvider>
+      <TodoList />
+    </TodoProvider>
   );
-}
+};
 
 export default App;

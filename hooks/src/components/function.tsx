@@ -22,8 +22,8 @@ const Counter: React.FC = () => {
 
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <button onClick={increment}>Increment</button>
+      <h1>Coin : {count}</h1>
+      <button onClick={increment}>돈벌기</button>
     </div>
   );
 }
