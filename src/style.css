@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  background-color: ivory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30vw;
+  align-items: center;
+  gap: 300px;
+}
+
+.verticalDot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(151, 114, 64, 1);
+  margin-top: 10px;
+}
+
+.verticalLine {
+  width: 439px;
+  height: 2px;
+  transform: rotate(-90deg);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 143, 67, 0.5) 0%,
+    rgba(80, 47, 10, 0.5) 100%
+  );
+}
+
+.arrowDot {
+  width: 23px;
+  height: 40px;
+  background-color: rgba(255, 177, 79, 1);
+  margin-left: 4vw;
+}
+
+.cardflex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moveUp {
+  transform: translateY(-100%); /* 클릭 시 카드를 위로 이동시킵니다. */
+}
+
+.card {
+  position: relative;
+  width: 1044px;
+  height: 490px;
+  margin-top: 2vw;
+}
+
+.cardContainer {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(214, 195, 149, 0.3);
+  box-shadow: 1px 4px 15.6px -5px rgba(87, 76, 49, 1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(125, 114, 87, 0.5) 100%
+  );
+}
+
+.cardTitle {
+  position: absolute;
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77.45px;
+  text-align: justified;
+  z-index: 2;
+  top: 103px;
+  left: 144px;
+}
+
+.cardLine {
+  position: absolute;
+  width: 439px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(210, 143, 67, 0.5) 0%,
+    rgba(80, 47, 10, 0.5) 100%
+  );
+  z-index: 1;
+  top: 118px;
+  left: 574px;
+}
+
+.cardText {
+  position: absolute;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: justified;
+  z-index: 1;
+  top: 188px;
+  left: 207px;
+}
+
+.App {
+  text-align: center;
+  margin: 20px;
+}
