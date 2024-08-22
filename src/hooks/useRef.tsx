@@ -1,19 +1,23 @@
 import React, { useState, useRef } from "react";
 
-const InputSample = () => {
+interface Inputs {
+  이름: string;
+  nickname: string;
+}
 
+export const InputSample: React.FC = () => {
   //input의 상태를 관리하는 객체
-  const [inputs, setInputs] = useState({
+  const [inputs, setInputs] = useState<Inputs>({
     이름: "",
     nickname: "",
   });
   //dom요소에 접근하기 위한 ref객체
-  const nameFocus = useRef();
+  const nameFocus = useRef<HTMLInputElement>(null);
   //구조분해 할당
   const { 이름, nickname } = inputs;
   //input값이 변경될 때 호출되는 함수
   //이벤트 객체에서 value와 name을 추출하고 ...input으로 기존 input상태를 복사한 후 변경된 필드만 업데이트함.
-  const onChange = (e) => {
+  const onChange = (e: { target: { value: any; name: any } }) => {
     const { value, name } = e.target;
     setInputs({
       ...inputs,
@@ -26,7 +30,7 @@ const InputSample = () => {
       이름: "",
       nickname: "",
     });
-    nameFocus.current.focus();
+    nameFocus.current!.focus();
   };
   return (
     <div>
@@ -51,5 +55,3 @@ const InputSample = () => {
     </div>
   );
 };
-
-export default InputSample;

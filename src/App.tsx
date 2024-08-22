@@ -1,16 +1,12 @@
 import React from "react";
 import "./style.css";
-import CardComponent from "./component/cardComponent";
+// import CardComponent from "./component/cardComponent";
+import { InputSample } from "./hooks/useRef";
 
 const App: React.FC = () => {
   return (
     <div id="root" className="root">
-      <CardComponent />
-      <div className="arrowDot" />
-      <div className="vertical">
-        <div className="verticalLine" />
-        <div className="verticalDot" />
-      </div>
+      <InputSample />
     </div>
   );
 };
